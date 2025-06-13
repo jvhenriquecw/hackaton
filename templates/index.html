@@ -6,10 +6,17 @@
     <title>ReclameEduca</title>
 </head>
 <body>
-    <h1>Se quiser sim mano</h1>
+    <h1>Reclamacoes</h1>
+    <a href="/create">Nova Reclamaçao</a>
     <ul>
         {% for reclamacao in reclamacoes %}
-            <li> {{ reclamacao.titulo }}</li>
+            <li>
+                <strong>{{ reclamacao.titulo }}</strong>
+                [<a href='/show/{{reclamacao.id}}'>Ver</a>]
+                [<a href='/edit/{{reclamacao.id}}'>Editar</a>]
+                [<a href='/delete/{{reclamacao.id}}'>Excluir</a>]
+            </li>
+            
         {% endfor %}
     </ul>
 </body>
